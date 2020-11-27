@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/topology.xsd">
+    <exchange name="magento" type="topic" connection="amqp">
+        <!-- Downloader -->
+        <binding id="transporterDownloaderExchangeBinding" topic="transporter.downloader" destinationType="queue" destination="transporter.downloader.queue"/>
+
+        <!-- Manipulator -->
+        <binding id="transporterManipulatorExchangeBinding" topic="transporter.manipulator" destinationType="queue" destination="transporter.manipulator.queue"/>
+
+        <!-- Uploader -->
+        <binding id="transporterUploaderExchangeBinding" topic="transporter.uploader" destinationType="queue" destination="transporter.uploader.queue"/>
+    </exchange>
+</config>

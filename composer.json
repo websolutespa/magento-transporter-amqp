@@ -1,0 +1,21 @@
+{
+    "name": "websolutespa/magento-transporter-amqp",
+    "description": "Websolute Transporter Amqp module",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "websolutespa/magento-transporter-base": "^1.0",
+        "websolutespa/magento-transporter-download": "^1.0",
+        "websolutespa/magento-transporter-manipulation": "^1.0",
+        "websolutespa/magento-transporter-upload": "^1.0"
+    },
+    "license": "OSL-3.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Websolute\\TransporterAmqp\\": ""
+        }
+    }
+}

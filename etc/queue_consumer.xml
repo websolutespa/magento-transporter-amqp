@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
+    <!-- Downloaders -->
+    <consumer name="transporter.downloader.1"
+              queue="transporter.downloader.queue"
+              handler="Websolute\TransporterAmqp\Model\DownloaderConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+    <consumer name="transporter.downloader.2"
+              queue="transporter.downloader.queue"
+              handler="Websolute\TransporterAmqp\Model\DownloaderConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+    <consumer name="transporter.downloader.3"
+              queue="transporter.downloader.queue"
+              handler="Websolute\TransporterAmqp\Model\DownloaderConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+
+    <!-- Manipulators -->
+    <consumer name="transporter.manipulator.1"
+              queue="transporter.manipulator.queue"
+              handler="Websolute\TransporterAmqp\Model\ManipulatorConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+    <consumer name="transporter.manipulator.2"
+              queue="transporter.manipulator.queue"
+              handler="Websolute\TransporterAmqp\Model\ManipulatorConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+    <consumer name="transporter.manipulator.3"
+              queue="transporter.manipulator.queue"
+              handler="Websolute\TransporterAmqp\Model\ManipulatorConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+
+    <!-- Uploaders -->
+    <consumer name="transporter.uploader.1"
+              queue="transporter.uploader.queue"
+              handler="Websolute\TransporterAmqp\Model\UploaderConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+    <consumer name="transporter.uploader.2"
+              queue="transporter.uploader.queue"
+              handler="Websolute\TransporterAmqp\Model\UploaderConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+    <consumer name="transporter.uploader.3"
+              queue="transporter.uploader.queue"
+              handler="Websolute\TransporterAmqp\Model\UploaderConsumer::process"
+              connection="amqp"
+              maxMessages="5000"/>
+</config>

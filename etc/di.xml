@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Websolute spa. All rights reserved.
+  ~ See COPYING.txt for license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Downloaders -->
+    <preference for="Websolute\TransporterAmqp\Api\Data\DownloaderInfoInterface" type="Websolute\TransporterAmqp\Model\Data\DownloaderInfo"/>
+    <type name="Websolute\TransporterBase\Model\DownloaderListProcessor">
+        <plugin sortOrder="1" name="AmqpDownloaderListProcessor" type="Websolute\TransporterAmqp\Plugin\DownloaderListProcessorPlugin"/>
+    </type>
+
+    <!-- Manipulators -->
+    <preference for="Websolute\TransporterAmqp\Api\Data\ManipulatorInfoInterface" type="Websolute\TransporterAmqp\Model\Data\ManipulatorInfo"/>
+    <type name="Websolute\TransporterBase\Model\ManipulatorListProcessor">
+        <plugin sortOrder="1" name="websoluteTransporterAmqpManipulatorListProcessor" type="Websolute\TransporterAmqp\Plugin\ManipulatorListProcessorPlugin"/>
+    </type>
+
+    <!-- Uploaders -->
+    <preference for="Websolute\TransporterAmqp\Api\Data\UploaderInfoInterface" type="Websolute\TransporterAmqp\Model\Data\UploaderInfo"/>
+    <type name="Websolute\TransporterBase\Model\UploaderListProcessor">
+        <plugin sortOrder="1" name="AmqpUploaderListProcessor" type="Websolute\TransporterAmqp\Plugin\UploaderListProcessorPlugin"/>
+    </type>
+</config>
