@@ -1,7 +1,7 @@
 <?php
 /*
  * Copyright © Websolute spa. All rights reserved.
- * See COPYING.txt for license details.
+ * See LICENSE and/or COPYING.txt for license details.
  */
 
 declare(strict_types=1);
@@ -22,6 +22,10 @@ class ManipulatorInfo implements ManipulatorInfoInterface
      */
     private $entity_identifier;
 
+    /**
+     * @param int $activity_id
+     * @param string $entity_identifier
+     */
     public function __construct(
         int $activity_id,
         string $entity_identifier

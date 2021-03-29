@@ -1,17 +1,15 @@
 <?xml version="1.0"?>
 <!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
+  ~ Copyright © Websolute spa. All rights reserved.
+  ~ See LICENSE and/or COPYING.txt for license details.
+  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Communication/etc/communication.xsd">
     <!-- Downloaders -->
-    <topic name="transporter.downloader" request="Websolute\TransporterAmqp\Api\Data\DownloaderInfoInterface"/>
+    <topic name="transporter.downloader" request="Websolute\TransporterAmqp\Api\Data\DownloaderInfoInterface" />
 
     <!-- Manipulators -->
-    <topic name="transporter.manipulator" request="Websolute\TransporterAmqp\Api\Data\ManipulatorInfoInterface"/>
+    <topic name="transporter.manipulator" request="Websolute\TransporterAmqp\Api\Data\ManipulatorInfoInterface" />
 
     <!-- Uploaders -->
-    <topic name="transporter.uploader" request="Websolute\TransporterAmqp\Api\Data\UploaderInfoInterface"/>
+    <topic name="transporter.uploader" request="Websolute\TransporterAmqp\Api\Data\UploaderInfoInterface" />
 </config>

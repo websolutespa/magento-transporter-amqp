@@ -1,7 +1,7 @@
 <?php
 /*
  * Copyright © Websolute spa. All rights reserved.
- * See COPYING.txt for license details.
+ * See LICENSE and/or COPYING.txt for license details.
  */
 
 declare(strict_types=1);
@@ -43,10 +43,10 @@ class Config
     /**
      * @return bool
      */
-    public function isEnabledForDownloaders(): bool
+    public function isEnabled(): bool
     {
-        return $this->isEnabled() && (bool)$this->scopeConfig->getValue(
-            self::IMPORT_AMQP_IS_ENABLED_FOR_DOWNLOADERS_CONFIG_PATH,
+        return $this->baseConfig->isEnabled() && (bool)$this->scopeConfig->getValue(
+            self::IMPORT_AMQP_IS_ENABLED_CONFIG_PATH,
             ScopeInterface::SCOPE_STORE
         );
     }
@@ -54,10 +54,10 @@ class Config
     /**
      * @return bool
      */
-    public function isEnabled(): bool
+    public function isEnabledForDownloaders(): bool
     {
-        return $this->baseConfig->isEnabled() && (bool)$this->scopeConfig->getValue(
-            self::IMPORT_AMQP_IS_ENABLED_CONFIG_PATH,
+        return $this->isEnabled() && (bool)$this->scopeConfig->getValue(
+            self::IMPORT_AMQP_IS_ENABLED_FOR_DOWNLOADERS_CONFIG_PATH,
             ScopeInterface::SCOPE_STORE
         );
     }
