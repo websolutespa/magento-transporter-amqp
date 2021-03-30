@@ -6,19 +6,20 @@
     "magento/framework": "*",
     "websolutespa/magento-transporter-base": "^1.0",
     "websolutespa/magento-transporter-download": "^1.0",
-    "websolutespa/magento-transporter-manipulation": "^1.0"
+    "websolutespa/magento-transporter-manipulation": "^1.0",
+    "websolutespa/magento-transporter-upload": "^1.0"
   },
   "authors": [
-    {
-      "name": "Riccardo Ugolini",
-      "email": "riccardo.ugolini@gmail.com",
-      "homepage": "https://www.linkedin.com/in/riccardougolini/",
-      "role": "Software Architect"
-    },
     {
       "name": "Danilo Argentiero",
       "email": "argentiero.danilo@gmail.com",
       "homepage": "https://www.linkedin.com/in/daniloargentiero/",
+      "role": "Software Architect"
+    },
+    {
+      "name": "Riccardo Ugolini",
+      "email": "riccardo.ugolini@gmail.com",
+      "homepage": "https://www.linkedin.com/in/riccardougolini/",
       "role": "Software Architect"
     }
   ],
